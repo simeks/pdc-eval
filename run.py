@@ -1,7 +1,7 @@
 import os, shutil, subprocess, time
 
 if 'PDC_EVAL_DATA_PATH' in os.environ:
-    data_path = os.environ['EVAL_DATA_PATH']
+    data_path = os.environ['PDC_EVAL_DATA_PATH']
 else:
     data_path = 'data'
 
