@@ -1,0 +1,21 @@
+block_size: [16, 16, 16]
+max_iteration_count: 100
+block_energy_epsilon: 1.0e-06
+
+step_size: 0.1
+
+regularization_weight: 3
+regularization_exponent: 7
+regularization_scale: 7
+
+pyramid_levels: 3
+pyramid_stop_level: 0
+levels:
+  '0': { max_iteration_count: 20 }
+  '1': { max_iteration_count: 40 }
+
+image_slots:
+- cost_function:
+  - {function: ncc, radius: 2, weight: 1.0}
+  normalize: false
+  resampler: gaussian
