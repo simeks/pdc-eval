@@ -24,6 +24,8 @@ scales = [
 
 img_path = os.path.join(data_path, 'images')
 resampled_path = os.path.join(data_path, 'resampled')
+if not os.path.isdir(resampled_path):
+    os.mkdir(resampled_path)
 
 for f in os.listdir(img_path):
     src = sitk.ReadImage(os.path.join(img_path, f))
